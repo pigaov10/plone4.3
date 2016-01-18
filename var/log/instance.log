@@ -2805,3 +2805,43 @@
 2016-01-18T18:51:45 INFO SignalHandler Caught signal SIGINT
 ------
 2016-01-18T18:51:45 INFO Z2 Shutting down
+------
+2016-01-18T19:40:52 INFO ZServer HTTP server started at Mon Jan 18 19:40:52 2016
+	Hostname: 0.0.0.0
+	Port: 8080
+------
+2016-01-18T19:41:12 INFO Plone OpenID system packages not installed, OpenID support not available
+------
+2016-01-18T19:41:20 INFO Zope Ready to handle requests
+------
+2016-01-18T20:22:04 INFO SignalHandler Caught signal SIGINT
+------
+2016-01-18T20:22:04 INFO Z2 Shutting down
+------
+2016-01-18T20:22:16 INFO ZServer HTTP server started at Mon Jan 18 20:22:16 2016
+	Hostname: 0.0.0.0
+	Port: 8080
+------
+2016-01-18T20:22:26 INFO Plone OpenID system packages not installed, OpenID support not available
+------
+2016-01-18T20:22:32 INFO Zope Ready to handle requests
+------
+2016-01-18T20:24:55 INFO SignalHandler Caught signal SIGINT
+------
+2016-01-18T20:24:55 INFO Z2 Shutting down
+------
+2016-01-18T20:25:07 INFO ZServer HTTP server started at Mon Jan 18 20:25:07 2016
+	Hostname: 0.0.0.0
+	Port: 8080
+------
+2016-01-18T20:28:30 INFO ZServer HTTP server started at Mon Jan 18 20:28:30 2016
+	Hostname: 0.0.0.0
+	Port: 8080
+------
+2016-01-18T20:28:42 INFO Plone OpenID system packages not installed, OpenID support not available
+------
+2016-01-18T20:28:50 INFO Zope Ready to handle requests
+------
+2016-01-18T20:30:19 INFO SignalHandler Caught signal SIGINT
+------
+2016-01-18T20:30:19 INFO Z2 Shutting down

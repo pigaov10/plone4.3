@@ -1,0 +1,23 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="raphael.teste">
+
+  <five:registerPackage package="." initialize=".initialize" />
+
+  <includeDependencies package="." />
+
+  <!-- -*- extra stuff goes here -*- -->
+  <browser:viewlet
+   name="social"
+   for="ploneconf.site.behaviors.social.ISocial"
+   manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+   class=".viewlets.SocialViewlet"
+   layer="zope.interface.Interface"
+   template="templates/social_viewlet.pt"
+   permission="zope2.View"
+  />
+
+
+</configure>

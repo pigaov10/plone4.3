@@ -8,6 +8,4 @@
 
   <includeDependencies package="." />
 
-  <!-- -*- extra stuff goes here -*- -->
-
 </configure>
