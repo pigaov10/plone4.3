@@ -1,0 +1,90 @@
+Metadata-Version: 1.1
+Name: templer.localcommands
+Version: 1.0b2
+Summary: Templer system framework for local commands
+Home-page: https://github.com/collective/templer.localcommands
+Author: Cris Ewing
+Author-email: cris@crisewing.com
+License: MIT
+Description: .. contents::
+        
+        Introduction
+        ============
+        
+        This package provides the framework for local commands within the templer
+        system. In order for localcommands to be available to any templer package,
+        this package must be included.
+        
+        In general, this is accomplished through an extra for the package, so for 
+        example if you wish to enable the local commands available for the templates
+        in the templer.plone package, you would reference the package thus::
+        
+            templer.plone[localcommands]
+        
+        This flexibility allows more advanced users to use lighter, more flexible 
+        templates, while also supporting new users with templates that help them to 
+        get started more quickly.
+        
+        Contributors
+        ============
+        
+        - Cris Ewing, original author
+        
+        Based on code from zopeskel, contributors to which include:
+        
+        - Daniel Nouri
+        - Tarek Ziadé
+        - Mustapha Benali
+        - Sylvain Viollon
+        - Alan Hoey
+        - Josh Johnson
+        - Emanuel Sartor
+        - Matthew Wilkes
+        - Joel Burton
+        - Cris Ewing
+        - Chris Calloway
+        - Chris Rossi
+        
+        Changelog
+        =========
+        
+        0.1b2 May 20, 2012
+        ------------------
+        
+        - Fix packaging error
+          [cewing]
+        
+        0.1b1 May 17, 2012
+        ------------------
+        
+        - Add TemplerLocalCommand and TemplerLocalTemplate base classes, modelled
+          on the local command and template classes from zopeskel, with fixes
+          [cewing]
+        
+        - Add tests for local command instance methods
+          [cewing]
+        
+        - Package created using templer
+          [cewing]
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Framework :: Zope2
+Classifier: Framework :: Zope3
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: 3.2
+Classifier: Framework :: Plone :: 3.3
+Classifier: Framework :: Plone :: 4.0
+Classifier: Framework :: Plone :: 4.1
+Classifier: Framework :: Buildout
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.4
+Classifier: Programming Language :: Python :: 2.5
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Code Generators

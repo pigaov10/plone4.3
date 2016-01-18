@@ -1,0 +1,182 @@
+Metadata-Version: 1.1
+Name: templer.plone
+Version: 1.0b4
+Summary: Templer system extensions for plone add-on development
+Home-page: http://svn.plone.org/svn/collective/templer.plone
+Author: Cris Ewing
+Author-email: cris@crisewing.com
+License: MIT
+Description: .. contents::
+        
+        Introduction
+        ============
+        
+        This package extends the functionality of the templer code generation system.
+        It builds upon the functionality of templer.core_, templer.buildout_ and 
+        templer.zope_, and depends on those packages. This package provides basic 
+        support for creating plone add-ons. Included are templates for basic plone 
+        packages, nested namespace plone packages and archetypes plone packages.
+        
+        Primary Documentation for the templer code generation system may be found 
+        in the Templer Manual_ on Read The Docs.
+        
+        .. _templer.core: http://pypi.python.org/pypi/templer.core
+        .. _templer.buildout: http://pypi.python.org/pypi/templer.buildout
+        .. _templer.zope: http://pypi.python.org/pypi/templer.zope
+        .. _Manual: http://templer-manual.readthedocs.org
+        
+        Creating Packages
+        -----------------
+        
+        As with the parent package, templer.core, creating packages using
+        templer.plone templates is accomplished by using the ``templer`` script. The
+        script is invoked thus::
+        
+            templer plone_basic
+        
+        This will create a basic plone package skeleton.
+        
+        Migration from ZopeSkel
+        -------------------------
+        
+        Templer cannot coexist with ZopeSkel before version 3.0 in the same buildout
+        or Python virtualenv. If you have previously installed ZopeSkel 2.x in your 
+        environment, uninstall it completely before using templer-based packages or 
+        ZopeSkel 3.
+        
+        Otherwise you will encounter the following error when trying to create packages::
+        
+              IOError: No egg-info directory found (looked in ./mycompany.content/./mycompany.content.egg-info, ./mycompany.content/bootstrap.py/mycompany.content.egg-info, ./mycompany.content/buildout.cfg/mycompany.content.egg-info, ./mycompany.content/CHANGES.txt/mycompany.content.egg-info, ./mycompany.content/CONTRIBUTORS.txt/mycompany.content.egg-info, ./mycompany.content/docs/mycompany.content.egg-info, ./mycompany.content/MANIFEST.in/mycompany.content.egg-info, ./mycompany.content/mycompany/mycompany.content.egg-info, ./mycompany.content/Paste-1.7.5.1-py2.6.egg/mycompany.content.egg-info, ./mycompany.content/PasteDeploy-1.5.0-py2.6.egg/mycompany.content.egg-info, ./mycompany.content/PasteScript-1.7.5-py2.6.egg/mycompany.content.egg-info, ./mycompany.content/README.txt/mycompany.content.egg-info, ./mycompany.content/setup.cfg/mycompany.content.egg-info, ./mycompany.content/setup.py/mycompany.content.egg-info, ./mycompany.content/src/mycompany.content.egg-info)
+        
+        Before start using Templer
+        
+        * Remove ZopeSkel references in buildout.cfg
+        
+        * rm -rf eggs/ZopeSkel*
+        
+        Other Functions
+        ---------------
+        
+        The ``templer`` script provides a number of other functions, these are described
+        in full on the index page for templer.core_ at PyPI_
+        
+        .. _templer.core: http://pypi.python.org/pypi/templer.core
+        .. _PyPI: http://pypi.python.org/pypi
+        
+        Source code and issue tracking
+        -----------------------------------
+        
+        * https://github.com/collective/templer.plone
+        
+        Contributors
+        ============
+        
+        - Cris Ewing, original author
+        - Josh Johnson
+        - David Ray
+        - Maik Röder
+        
+        Based on code from zopeskel, contributors to which include:
+        
+        - Daniel Nouri
+        - Tarek Ziadé
+        - Mustapha Benali
+        - Sylvain Viollon
+        - Alan Hoey
+        - Josh Johnson
+        - Emanuel Sartor
+        - Matthew Wilkes
+        - Joel Burton
+        - Cris Ewing
+        - Chris Calloway
+        - Chris Rossi
+        
+        Changelog
+        =========
+        
+        1.0b4 February 10, 2013
+        -----------------------
+        
+        - Add robot based functional tests as an option.
+          [maikroeder]
+        
+        
+        1.0b3 January 9, 2013
+        ---------------------
+        
+        -  More verbose test setup added. Compliant with PPD 4 and p.a.testing
+           documentation.
+           [timo]
+        
+        - Template for Tiles added.
+          [timo]
+        
+        
+        1.0b2 September 16, 2012
+        ------------------------
+        
+        - Improve infrastructure created for testing plone packages
+          [gotcha]
+        
+        - Add a buildout to the package to ease development of templer.plone
+          [gotcha]
+        
+        - Improve README with links to source and tracker and compatibility warning 
+          about ZopeSkel 2.x
+          [miohtama]
+        
+        - More package classifiers are included by default
+          [hvelarde]
+        
+        - Development buildout extends test-4.x.cfg instead of plone-4.1.x.cfg; test
+          part uses better default options
+          [hvelarde]
+        
+        1.0b1 - May 20, 2012
+        --------------------
+        
+        - Re-establish localcommand support for the archetype and plone templates
+          [cewing]
+        
+        - Add support for optional localcommands
+          [cewing]
+        
+        - Create new nested namespace plone package template, like zopeskel's old
+          plone_app template
+          [cewing]
+        
+        - Improve the consistency of messaging across templates
+          [cewing]
+        
+        1.0a1 - October 7, 2011
+        -----------------------
+        
+        - Ported archetype template and doctests from zopeskel [jjmojojjmojo]
+        
+        - Ported basic plone template and doctests from zopeskel [cewing]
+        
+        - Package created using templer
+          [cewing]
+        
+        
+Keywords: zope buildout plone
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Zope2
+Classifier: Framework :: Zope3
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: 3.2
+Classifier: Framework :: Plone :: 3.3
+Classifier: Framework :: Plone :: 4.0
+Classifier: Framework :: Plone :: 4.1
+Classifier: Framework :: Plone :: 4.2
+Classifier: Framework :: Plone :: 4.3
+Classifier: Framework :: Buildout
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.4
+Classifier: Programming Language :: Python :: 2.5
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development :: Code Generators

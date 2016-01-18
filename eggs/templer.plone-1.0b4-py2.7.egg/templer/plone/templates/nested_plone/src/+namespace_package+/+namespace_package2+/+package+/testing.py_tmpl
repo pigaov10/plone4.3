@@ -1,0 +1,22 @@
+from plone.app.testing import PloneWithPackageLayer
+from plone.app.testing import IntegrationTesting
+from plone.app.testing import FunctionalTesting
+
+import ${namespace_package}.${namespace_package2}.${package}
+
+
+${namespace_package.upper()}_${namespace_package2.upper()}_${package.upper()} = PloneWithPackageLayer(
+    zcml_package=${namespace_package}.${namespace_package2}.${package},
+    zcml_filename='testing.zcml',
+#if str($add_profile) == 'True'
+    gs_profile_id='${namespace_package}.${namespace_package2}.${package}:testing',
+#end if
+    name="${namespace_package.upper()}_${namespace_package2.upper()}_${package.upper()}")
+
+${namespace_package.upper()}_${namespace_package2.upper()}_${package.upper()}_INTEGRATION = IntegrationTesting(
+    bases=(${namespace_package.upper()}_${namespace_package2.upper()}_${package.upper()}, ),
+    name="${namespace_package.upper()}_${namespace_package2.upper()}_${package.upper()}_INTEGRATION")
+
+${namespace_package.upper()}_${namespace_package2.upper()}_${package.upper()}_FUNCTIONAL = FunctionalTesting(
+    bases=(${namespace_package.upper()}_${namespace_package2.upper()}_${package.upper()}, ),
+    name="${namespace_package.upper()}_${namespace_package2.upper()}_${package.upper()}_FUNCTIONAL")

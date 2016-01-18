@@ -1,0 +1,5 @@
+from zope.interface import Interface
+
+
+class $(interface_name)(Interface):
+    """Marker interface for the $(contenttype_name)"""

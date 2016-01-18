@@ -1,0 +1,6 @@
+
+      # -*- Entry points: -*-
+      [paste.paster_create_template]
+      zope2_basic = templer.zope:BasicZope
+      zope2_nested = templer.zope:NestedZope
+      

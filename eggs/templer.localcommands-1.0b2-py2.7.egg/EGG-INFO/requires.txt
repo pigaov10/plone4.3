@@ -1,0 +1,7 @@
+setuptools
+templer.core
+
+[test]
+templer.plone
+templer.zope
+templer.buildout

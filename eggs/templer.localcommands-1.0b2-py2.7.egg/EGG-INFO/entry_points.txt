@@ -1,0 +1,4 @@
+
+      [paste.paster_command]
+      add = templer.localcommands:TemplerLocalCommand
+      
